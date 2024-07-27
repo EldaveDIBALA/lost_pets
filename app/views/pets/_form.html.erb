@@ -1,0 +1,14 @@
+<%= simple_form_for @pet do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :species, collection: Pet::SPECIES, label: 'Species' %>
+      <%= f.input :found_on %>
+      <div class="text-center">
+        <%= link_to "Go Back", root_path, class: "btn btn-secondary" %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>
