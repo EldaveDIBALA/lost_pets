@@ -1,5 +1,8 @@
 <div class="container mt-5">
   <h1 class="text-center mb-3">Lost Pets</h1>
+  <div class="d-flex justify-content-end mb-3">
+    <%= link_to "Add a Lost Pet", pets_new_path, class: "btn btn-success" %>
+  </div>
   <div class="row">
     <% @pets.each do |pet| %>
       <div class="col-md-3">

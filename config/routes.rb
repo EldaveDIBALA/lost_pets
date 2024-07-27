@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root 'pets#index'
   get 'pets/new', to: 'pets#new'
+  post 'pets', to: 'pets#create'
   get 'pets/:id', to: 'pets#show', as: 'pet'
+  
 end
